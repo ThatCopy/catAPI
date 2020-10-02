@@ -1,5 +1,4 @@
-const { ApolloServer, gql } = require("apollo-server")
-const Cat = require("./models/Cat")
+const { ApolloServer } = require("apollo-server")
 require("dotenv").config()
 const mongoose = require('mongoose');
 const typeDefs = require("./typedefs")
