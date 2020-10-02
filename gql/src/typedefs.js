@@ -10,11 +10,5 @@ module.exports =  gql`
         url: String
         webpurl: String
     }
-    type Mutation {
-    createCat(
-        _id: Int!,
-        url: String!,
-        webpurl: String!
-    ): Cat!
-  }
+
 `

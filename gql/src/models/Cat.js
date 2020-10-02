@@ -6,7 +6,6 @@ const Cat = new Schema(
         _id: {type: Number, required: true},
         url: { type: String, required: true },
         webpurl: { type: String, required: true },
-        //id: {type: Number, required: true},
     },
     { timestamps: false },
 )

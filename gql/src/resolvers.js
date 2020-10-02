@@ -10,13 +10,6 @@ module.exports = resolvers = {
         hello: () => "Ahoj",
         cats: () => Cat.find(),
         cat: async () => Cat.findById(await getCat())
-    },
-    Mutation: {
-        createCat: async (_, { _id, url, webpurl }) => {
-          const cat = new Cat({ _id: _id, url: url, webpurl: webpurl })
-          await cat.save()
-          return cat
-        }
     }
 }
 
