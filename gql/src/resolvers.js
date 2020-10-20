@@ -8,7 +8,10 @@ module.exports = resolvers = {
     Query: {
         hello: () => "Ahoj",
         cats: () => Cat.find(),
-        cat: async () => Cat.findById(await getCat())
+        cat: async () => Cat.findById(await getCat()),
+        catId (parent, args, context, info) {
+            Cat.findById(args.id)
+        }
     }
 }
 

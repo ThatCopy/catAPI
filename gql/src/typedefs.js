@@ -4,11 +4,14 @@ module.exports =  gql`
         hello: String!
         cats: [Cat!]!
         cat: Cat!
+        catId(id: Int!): Cat!
     }
     type Cat{
         _id: Int
         url: String
         webpurl: String
+        x: Float
+        y: Float
     }
 
 `
