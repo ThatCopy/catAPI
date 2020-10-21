@@ -4,7 +4,7 @@ orbs:
   node: circleci/node@3.0.0
 
 jobs:
-  build:
+  test:
     working_directory: ~/resz
     # Reuse Docker container specification given by the node Orb
     executor: node/default
