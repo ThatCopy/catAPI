@@ -3,7 +3,7 @@ jobs:
   gql-test: 
     executor: node/default
     steps: 
-    - checkout
+      - checkout
       - node/install-npm
       - 
         node/install-packages: 
