@@ -20,7 +20,7 @@ jobs:
       - run:
           working_directory: ~/rest
           name: Test
-          command: npm rest
+          command: npm test
         
 workflows:
   test_my_app:
