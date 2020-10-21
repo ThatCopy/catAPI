@@ -9,8 +9,10 @@ module.exports = resolvers = {
         hello: () => "Ahoj",
         cats: () => Cat.find(),
         cat: async () => Cat.findById(await getCat()),
-        catId (parent, args, context, info) {
-            Cat.findById(args.id)
+        catId: async (parent, args, context, info) => {
+            console.log(args.id)
+            console.log(await Cat.findById(1))
+            return await Cat.findById(1)
         }
     }
 }

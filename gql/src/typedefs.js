@@ -4,7 +4,7 @@ module.exports =  gql`
         hello: String!
         cats: [Cat!]!
         cat: Cat!
-        catId(id: Int!): Cat!
+        catId(id: Int!): Cat
     }
     type Cat{
         _id: Int
