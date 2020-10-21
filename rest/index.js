@@ -1,22 +1,3 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const cors = require('cors')
-require("dotenv").config()
-const db = require('./db')
-const catRouter = require('./routes/cat-router.js')
+const app = require("./app");
 
-const app = express()
-const apiPort = 3000
-
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(cors())
-app.use(bodyParser.json())
-function startRestServer(){
-    db.on('error', console.error.bind(console, 'MongoDB connection error:'))
-
-    app.use('/', catRouter)
-
-    app.listen(apiPort, () => console.log(`catAPI running on port ${apiPort}`))
-}
-
-startRestServer()
+app.listen(3000, () => console.log(`catAPI running on port 3000`))
