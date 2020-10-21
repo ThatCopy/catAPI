@@ -1,11 +1,11 @@
 jobs:
   test:
-    working_directory: ~/rest
     executor: node/default
     steps:
       - checkout
       - node/install-packages:
-          cache-path: ~/node_modules
+          app-dir: ~/rest
+          cache-path: node_modules
           override-ci-command: npm install
       - run: npm run test
 orbs:
