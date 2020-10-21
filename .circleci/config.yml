@@ -19,8 +19,7 @@ jobs:
           override-ci-command: npm i
       - run:
           name: Test
-          command: cd rest
-          command: npm test
+          command: cd rest && npm rest
         
 workflows:
   test_my_app:
