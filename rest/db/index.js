@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
-const { mongodb } = require("../env")
+const mongo = process.env.MONGO || require("../env").mongodb
 
 mongoose
-    .connect(mongodb, { useNewUrlParser: true, useUnifiedTopology: true })
+    .connect(mongo, { useNewUrlParser: true, useUnifiedTopology: true })
     .catch(e => {
         console.error('Connection error', e.message)
     })
