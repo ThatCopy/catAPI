@@ -40,7 +40,7 @@ jobs:
           command: npm test
         
 workflows:
-  test_my_app:
+  catapi-workflow:
     jobs:
       - gql-test
       - rest-test
