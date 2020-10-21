@@ -18,7 +18,7 @@ jobs:
           cache-path: node_modules
           override-ci-command: npm i
       - run:
-          working_directory: ~/rest
+          working_directory: ~/project/rest
           name: Test
           command: npm test
         
