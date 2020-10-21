@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   node: circleci/node@3.0.0
+  discord: antonioned/discord@0.1.0
 
 jobs:
   gql-test:
@@ -21,6 +22,8 @@ jobs:
           working_directory: ~/project/gql
           name: Test GraphQL
           command: npm test
+      - discord/status:
+          webhook: "${DISCORD_STATUS_WEBHOOK}"
   rest-test:
     working_directory: ~/project
     # Reuse Docker container specification given by the node Orb
@@ -38,6 +41,8 @@ jobs:
           working_directory: ~/project/rest
           name: Test REST
           command: npm test
+       - discord/status:
+          webhook: "${DISCORD_STATUS_WEBHOOK}"
         
 workflows:
   catapi-workflow:
