@@ -7,7 +7,6 @@ getCat = async (req, res) => {
 }
 
 getCatId = async (req, res) => {
-    console.log(req.params)
     if(!isNaN(req.params.id)){
         try {
             res.send(JSON.stringify((await Cat.findById(req.params.id)).toJSON()))
