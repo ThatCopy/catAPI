@@ -6,7 +6,7 @@ async function getCat(){
 }
 module.exports = resolvers = {
     Query: {
-        hello: () => "Ahoj",
+        hello: () => "Hi",
         cats: () => Cat.find(),
         cat: async () => Cat.findById(await getCat()),
         catId: async (parent, args, context, info) => {

@@ -2,12 +2,13 @@ const mongoose = require('mongoose');
 const Cat = require('../src/models/Cat');
 require("dotenv").config();
 const catData = {"_id":1,"webpurl":"https://i.thatcopy.pw/cat-webp/XwHHC9j.webp","url":"https://i.thatcopy.pw/cat/XwHHC9j.jpg","x":45.41,"y":66.32,"__v":0};
+const Mongo = process.env.MONGO || require("../env").mongodb
 
 describe('Cat Model Test', () => {
 
     
     beforeAll(async done => {
-        await mongoose.connect(process.env.MONGO, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }, (err) => {
+        await mongoose.connect(Mongo, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }, (err) => {
         done()
         });
     });
