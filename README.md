@@ -15,7 +15,7 @@ Make a file named env.js in the root dir:
 
 ```js
 module.exports = {
-    mongodb: <your mongo db uri>
+    mongodb: "<your mongo db uri>"
 }
 ```
 
