@@ -16,4 +16,3 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 app.use('/', catRouter)
 
 module.exports = app;
-
