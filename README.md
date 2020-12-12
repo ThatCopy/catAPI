@@ -1,12 +1,9 @@
 # catAPI
 catAPI is a RESTful and GraphQL API that will deliver photos with cats on demand.
 
-https://thatcopy.pw/catapi
+https://catapi.thatcopy.pw/
 
-## [Documentation](https://github.com/ThatCopy/catAPI/wiki)
-
-#### To run catAPI with docker
-// TODO : comple readme
+## [Documentation](https://catapi.thatcopy.pw/docs.html)
 
 
 #### To run catAPI:
