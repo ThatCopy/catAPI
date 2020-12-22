@@ -5,6 +5,7 @@ https://catapi.thatcopy.pw/
 
 ## [Documentation](https://catapi.thatcopy.pw/docs.html)
 
+## Node wrapper : https://www.npmjs.com/package/@thatcopy/catapi
 
 #### To run catAPI:
 
