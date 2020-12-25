@@ -15,7 +15,8 @@ getCatId = async (req, res) => {
             res.send({"error": "Bad id"})
         }
     } else {
-        res.send("Provide a real ID")
+        res.status(400);
+        res.send({"error": "Bad id"})
     }
 }
 
