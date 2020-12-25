@@ -11,7 +11,8 @@ getCatId = async (req, res) => {
         try {
             res.send((await Cat.findById(req.params.id)).toJSON())
         } catch (error) {
-            res.send("An error occurred")
+            res.status(400);
+            res.send({"error": "Bad id"})
         }
     } else {
         res.send("Provide a real ID")
