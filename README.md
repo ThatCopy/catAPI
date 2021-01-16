@@ -9,18 +9,21 @@ https://catapi.thatcopy.pw/
 
 #### To run catAPI:
 
-Make a file named env.js in the root dir:
+`npm i`
 
-```js
-module.exports = {
-    mongodb: "<your mongo db uri>"
-}
+Make a .env file in gql or rest, add your db like this
+
+```env
+DATABASE_URL="<your postgres uri>"
 ```
+
+make a migration
+
+`npx prisma migrate dev --name init --preview-feature`
+
 
 and run it by
 
-`node gql/src/server`
+`npm run comp`
 
-rest
-
-`node gql/src/server`
+`npm run start`
